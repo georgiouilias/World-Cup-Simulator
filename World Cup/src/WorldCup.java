@@ -31,18 +31,13 @@ public class WorldCup {
 					
 					switch(s2) {
 					case 1: 
-						if(Teams.isEmpty(teams) == true) {
-							Display.InsertTeams(teams);
-							break;
-						}
-						else {
-							System.out.println("Teams are already inserted");
-							break;
-						}
+						Display.InsertTeams();
+						break;
+						
 					case 2:
 						Display.ShowTeams();
 						break;
-						}
+					}
 				}while(s2!=3);
 				break;
 				
@@ -56,12 +51,14 @@ public class WorldCup {
 				
 			case 4: //Simulate Menu
 			//  System.out.println("Under construction! I need to create the ranking system first!");
-			//	Simulate.GroupStageScore();
+				Simulate.GroupStageScore();
 			//	Simulate.setNewPoints();
 			//	Simulate.Roundof16();
 			//	Simulate.Draw(rank,A,B,C,D,E);
+			//	Simulate.QuarterFinals();
 				break;
 			}
 		}while(s1!=5);
+		System.out.println("Bye! See you soon!");
 	}
 }
