@@ -14,7 +14,7 @@ public class Display {
 	}
 
 	public static void InsertTeams() {
-		int teams= 2;
+		int teams= 32;
 		for(int i=0; i<teams; i++) {
 			int j=i+1;
 			int c =0;
@@ -57,7 +57,7 @@ public class Display {
 					if (rs2.getString(1).equals(cname)) {
 
 						//eisagogi stin worldcupfinal basi	/ ksero oti douleuei apla iparxei thema ma to savepoit kai to autocommit		
-						pst0.setInt(1, j+10); //thelo na mpainei NULL. exo dilvsei stin basi AUTO_INCREMENT 
+						pst0.setInt(1, j); //thelo na mpainei NULL. exo dilvsei stin basi AUTO_INCREMENT 
 						pst0.setString(2, cname); //pairnei to onoma pou exei dosei apo to pliktrologio
 						pst0.setString(3, rs2.getString(2)); //pairnei to confederation analoga me to onoma pou exei dosei.
 						pst0.execute(); //gia na balei tis times stin basi

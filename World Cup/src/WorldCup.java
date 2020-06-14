@@ -7,7 +7,6 @@ public class WorldCup {
 		int s1=0; //Selection number from Main Menu
 		int s2=0; //Selection number from Insert Teams Menu
 		
-		Teams teams[] = new Teams[2];//32 Countries in the tournament
 		TeamRanking rank[] = new TeamRanking[10]; //210 SINOLO
 		TeamRanking.Ranking(rank);
 		
@@ -30,11 +29,11 @@ public class WorldCup {
 					s2 = UserInput.getInteger();
 					
 					switch(s2) {
-					case 1: 
+					case 1: //i need is full check
 						Display.InsertTeams();
 						break;
 						
-					case 2:
+					case 2: // i need is empty check
 						Display.ShowTeams();
 						break;
 					}
@@ -51,10 +50,10 @@ public class WorldCup {
 				
 			case 4: //Simulate Menu
 			//  System.out.println("Under construction! I need to create the ranking system first!");
-				Simulate.GroupStageScore();
+			//	Simulate.GroupStageScore();
 			//	Simulate.setNewPoints();
 			//	Simulate.Roundof16();
-			//	Simulate.Draw(rank,A,B,C,D,E);
+				Simulate.Draw();
 			//	Simulate.QuarterFinals();
 				break;
 			}

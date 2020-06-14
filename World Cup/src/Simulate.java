@@ -175,10 +175,12 @@ public class Simulate {
     	//edo tha trexei to tournoua, afou ftiakso to draw prota
     }
     
-    public static void Draw(TeamRanking[] rank, Groups[] A, Groups[] B,Groups[] C, Groups[] D, Groups[] E) { //5 groups of 2 teams just to test it
-    	//edo tha ginete i klirosi ton 32 omadon se 8 group ton 4ron omadon
+ //   public static void Draw(TeamRanking[] rank, Groups[] A, Groups[] B,Groups[] C, Groups[] D, Groups[] E) { //5 groups of 2 teams just to test it
+    public static void Draw() { //real thing
+
+    	//klirosi: 32 omades -> 8 groups -> 4 omades se kathe group
     	
-    	int c=0;
+ /*   	int c=0;
     	for(int i=0; i<2; i++) {
     		A[i] = new Groups(rank[c].getRName(), 0,0,0);
     		c++;
@@ -198,7 +200,32 @@ public class Simulate {
     		System.out.println("Group D: "+ D[i].getName());
     		System.out.println("Group E: "+ E[i].getName());
     	}
+   */ 	
+    	
+        Random n=new Random();
+        int rid=0;
+    	
+		String query = "SELECT team FROM worldcupfinal WHERE ID = '" + rid + "'";
 
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection conn = null;
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/worldcup","root", "");
+			//System.out.print("Database is connected !");
+			PreparedStatement pst = conn.prepareStatement(query);
+			ResultSet rs = pst.executeQuery();
+			
+			System.out.println("test draw");
+			
+			while (rs.next()) {
+				rid=n.nextInt(8-1);
+			}
+			
+			conn.close();
+		}
+		catch(Exception e)
+		{
+			System.out.print("Do not connect to DB ------------------ Error:"+e);
+		}
     }
-
 }
