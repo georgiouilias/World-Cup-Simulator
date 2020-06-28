@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 15 Ιουν 2020 στις 13:45:45
+-- Χρόνος δημιουργίας: 28 Ιουν 2020 στις 18:29:37
 -- Έκδοση διακομιστή: 10.4.11-MariaDB
 -- Έκδοση PHP: 7.4.6
 
@@ -265,10 +265,20 @@ CREATE TABLE `group a` (
   `Draws` int(1) NOT NULL,
   `Loses` int(1) NOT NULL,
   `Goals for` int(2) NOT NULL,
-  `Goals Against` int(2) NOT NULL,
+  `Goals against` int(2) NOT NULL,
   `Goal difference` int(2) NOT NULL,
   `Points` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `group a`
+--
+
+INSERT INTO `group a` (`Position`, `Team`, `Played`, `Wins`, `Draws`, `Loses`, `Goals for`, `Goals against`, `Goal difference`, `Points`) VALUES
+(1, 'Brazil', 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'England', 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Senegal', 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 'South Korea', 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -284,10 +294,20 @@ CREATE TABLE `group b` (
   `Draws` int(1) NOT NULL,
   `Loses` int(1) NOT NULL,
   `Goals for` int(2) NOT NULL,
-  `Goals Against` int(2) NOT NULL,
+  `Goals against` int(2) NOT NULL,
   `Goal difference` int(2) NOT NULL,
   `Points` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `group b`
+--
+
+INSERT INTO `group b` (`Position`, `Team`, `Played`, `Wins`, `Draws`, `Loses`, `Goals for`, `Goals against`, `Goal difference`, `Points`) VALUES
+(1, 'Belgium', 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'Croatia', 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Egypt', 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 'Japan', 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -303,10 +323,20 @@ CREATE TABLE `group c` (
   `Draws` int(1) NOT NULL,
   `Loses` int(1) NOT NULL,
   `Goals for` int(2) NOT NULL,
-  `Goals Against` int(2) NOT NULL,
+  `Goals against` int(2) NOT NULL,
   `Goal difference` int(2) NOT NULL,
   `Points` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `group c`
+--
+
+INSERT INTO `group c` (`Position`, `Team`, `Played`, `Wins`, `Draws`, `Loses`, `Goals for`, `Goals against`, `Goal difference`, `Points`) VALUES
+(1, 'Greece', 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 'Panama', 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Sweden', 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'Uruguay', 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -322,10 +352,20 @@ CREATE TABLE `group d` (
   `Draws` int(1) NOT NULL,
   `Loses` int(1) NOT NULL,
   `Goals for` int(2) NOT NULL,
-  `Goals Against` int(2) NOT NULL,
+  `Goals against` int(2) NOT NULL,
   `Goal difference` int(2) NOT NULL,
   `Points` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `group d`
+--
+
+INSERT INTO `group d` (`Position`, `Team`, `Played`, `Wins`, `Draws`, `Loses`, `Goals for`, `Goals against`, `Goal difference`, `Points`) VALUES
+(1, 'France', 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Iran', 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'Mexico', 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 'Nigeria', 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -341,10 +381,20 @@ CREATE TABLE `group e` (
   `Draws` int(1) NOT NULL,
   `Loses` int(1) NOT NULL,
   `Goals for` int(2) NOT NULL,
-  `Goals Against` int(2) NOT NULL,
+  `Goals against` int(2) NOT NULL,
   `Goal difference` int(2) NOT NULL,
   `Points` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `group e`
+--
+
+INSERT INTO `group e` (`Position`, `Team`, `Played`, `Wins`, `Draws`, `Loses`, `Goals for`, `Goals against`, `Goal difference`, `Points`) VALUES
+(1, 'Argentina', 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Denmark', 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 'Serbia', 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'Spain', 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -360,10 +410,20 @@ CREATE TABLE `group f` (
   `Draws` int(1) NOT NULL,
   `Loses` int(1) NOT NULL,
   `Goals for` int(2) NOT NULL,
-  `Goals Against` int(2) NOT NULL,
+  `Goals against` int(2) NOT NULL,
   `Goal difference` int(2) NOT NULL,
   `Points` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `group f`
+--
+
+INSERT INTO `group f` (`Position`, `Team`, `Played`, `Wins`, `Draws`, `Loses`, `Goals for`, `Goals against`, `Goal difference`, `Points`) VALUES
+(3, 'Costa Rica', 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 'Morocco', 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'Peru', 0, 0, 0, 0, 0, 0, 0, 0),
+(1, 'Portugal', 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -379,10 +439,20 @@ CREATE TABLE `group g` (
   `Draws` int(1) NOT NULL,
   `Loses` int(1) NOT NULL,
   `Goals for` int(2) NOT NULL,
-  `Goals Against` int(2) NOT NULL,
+  `Goals against` int(2) NOT NULL,
   `Goal difference` int(2) NOT NULL,
   `Points` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `group g`
+--
+
+INSERT INTO `group g` (`Position`, `Team`, `Played`, `Wins`, `Draws`, `Loses`, `Goals for`, `Goals against`, `Goal difference`, `Points`) VALUES
+(2, 'Colombia', 0, 0, 0, 0, 0, 0, 0, 0),
+(1, 'Germany', 0, 0, 0, 0, 0, 0, 0, 0),
+(4, 'Saudi Arabia', 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Tunisia', 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -398,9 +468,33 @@ CREATE TABLE `group h` (
   `Draws` int(1) NOT NULL,
   `Loses` int(1) NOT NULL,
   `Goals for` int(2) NOT NULL,
-  `Goals Against` int(2) NOT NULL,
+  `Goals against` int(2) NOT NULL,
   `Goal difference` int(2) NOT NULL,
   `Points` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `group h`
+--
+
+INSERT INTO `group h` (`Position`, `Team`, `Played`, `Wins`, `Draws`, `Loses`, `Goals for`, `Goals against`, `Goal difference`, `Points`) VALUES
+(4, 'Australia', 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Iceland', 0, 0, 0, 0, 0, 0, 0, 0),
+(1, 'Poland', 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'Switzerland', 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `schedule`
+--
+
+CREATE TABLE `schedule` (
+  `Match_ID` int(1) NOT NULL,
+  `Home` varchar(35) NOT NULL,
+  `Away` varchar(35) NOT NULL,
+  `HScore` int(1) NOT NULL,
+  `AScore` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -513,6 +607,12 @@ ALTER TABLE `group h`
   ADD PRIMARY KEY (`Team`);
 
 --
+-- Ευρετήρια για πίνακα `schedule`
+--
+ALTER TABLE `schedule`
+  ADD PRIMARY KEY (`Match_ID`);
+
+--
 -- Ευρετήρια για πίνακα `worldcupfinal`
 --
 ALTER TABLE `worldcupfinal`
@@ -527,6 +627,12 @@ ALTER TABLE `worldcupfinal`
 --
 ALTER TABLE `fifaranking`
   MODIFY `Rank` int(3) NOT NULL AUTO_INCREMENT COMMENT 'Potition', AUTO_INCREMENT=211;
+
+--
+-- AUTO_INCREMENT για πίνακα `schedule`
+--
+ALTER TABLE `schedule`
+  MODIFY `Match_ID` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT για πίνακα `worldcupfinal`
