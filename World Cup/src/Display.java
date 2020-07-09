@@ -22,8 +22,7 @@ public class Display {
 			String cname = UserInput.getString();
 
 			String query0 = "INSERT INTO worldcupfinal (ID, Team, Confederation) " + "VALUES (?, ?, ?)";
-			String query2 = "SELECT Name, Confederation FROM fifaranking WHERE Name = '" + cname + "'"; // gia na paro
-																										// to confederation
+			String query2 = "SELECT Name, Confederation FROM fifaranking WHERE Name = '" + cname + "'";
 
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
@@ -120,5 +119,16 @@ public class Display {
 				+ "2. Display teams\n" // show the schedule of the tournament
 				+ "3. Go Back!\n\n");
 	}
+
+	// Display Groups
+
+	/*
+				System.out.printf("%1s %15s %2s %2s %2s %2s %2s %2s %2s %2s\n", " POS|", "TEAM|", "P|", "W|", "D|", "L|", "FOR|", "AGAINST|", "DIFF|", "POINTS|");
+
+				while (rs.next()) {
+					System.out.printf("%4d %15s %2d %2d %2d %2d %4d %8d %5d %7d\n", rs.getInt(1), rs.getString(2), rs.getInt(3),
+							rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10));
+				}
+	 */
 
 }

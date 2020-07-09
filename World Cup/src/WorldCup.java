@@ -21,33 +21,41 @@ public class WorldCup {
 					switch (s2) {
 					case 1:
 						Checks.isFull();
-					//	Display.InsertTeams();
+						// Display.InsertTeams();
 						break;
 
 					case 2:
 						Checks.isEmpty();
-						//Display.ShowTeams();
+						// Display.ShowTeams();
 						break;
 					}
 				} while (s2 != 3);
 				break;
 
-			case 2:// Schedule of the tournament
-				System.out.println("Under construction! I need to create the ranking system first!");
+			case 2: // Schedule of the tournament
+				// Schedule.Groups();
+				// Schedule.RoundOf16();
+				// Schedule.QuarterFinals();
+				// Schedule.SemiFinals();
+				// Schedule.Final();
+				// Schedule.ShowSchedule();
 				break;
 
-			case 3:// ranking
-				Display.ShowRanking();
+			case 3: // ranking
+				// Display.ShowRanking();
+				FIFAPoints.GroupStagePoints();
 				break;
 
 			case 4: // Simulate Menu
+				// GroupStage.GroupPointsUpdate();
+				// GroupStage.OrderByPoints();
 				// Simulate.GroupStageScore();
 				// Simulate.setNewPoints();
 				// Simulate.Roundof16();
 				// Simulate.QuarterFinals();
+				// Simulate.SemiFinals();
+				// Simulate.Final();
 				// Draw.DrawGroup();
-			//	Schedule.GroupA();
-				Schedule.ShowSchedule();
 				break;
 			}
 		} while (s1 != 5);
