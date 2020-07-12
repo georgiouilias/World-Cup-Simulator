@@ -33,7 +33,6 @@ public class Checks {
 	public static void isFull() {
 
 		String query = "SELECT * FROM worldcupfinal";
-		// to confederation
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -44,7 +43,7 @@ public class Checks {
 			ResultSet rs = pst.executeQuery();
 
 			if (rs.next() == false) {
-				Display.InsertTeams();
+				Insert.InsertTeams();
 			} else {
 				System.out.println("Teams are inserted!");
 			}

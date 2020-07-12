@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 public class FIFAPoints {
 	public static void setPoints(int id, int important, double resultH, double resultA) {
 
-
 			String q1 = "SELECT * FROM schedule WHERE Match_ID= " + id;
 			String h = "SELECT * FROM fifaranking WHERE Name=?";
 			String a = "SELECT * FROM fifaranking WHERE Name=?";
@@ -52,13 +51,13 @@ public class FIFAPoints {
 							System.out.println("New points for " + hrs.getString(2) + ": " + pointsbH);
 							System.out.println("New points for " + ars.getString(2) + ": " + pointsbA);
 
-							// up.setDouble(1, pointsbH); //home update
-							// up.setString(2, hrs.getString(2));
-							// up.executeUpdate();
+							 up.setDouble(1, pointsbH); //home update
+							 up.setString(2, hrs.getString(2));
+							 up.executeUpdate();
 
-							// up.setDouble(1, pointsbA); //away update
-							// up.setString(2, hrs.getString(2));
-							// up.executeUpdate();
+							 up.setDouble(1, pointsbA); //away update
+							 up.setString(2, hrs.getString(2));
+							 up.executeUpdate();
 
 						}
 					}
@@ -69,4 +68,3 @@ public class FIFAPoints {
 			}
 		}
 	}
-}

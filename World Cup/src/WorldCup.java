@@ -4,8 +4,11 @@ public class WorldCup {
 
 	public static void main(String[] args) {
 
-		int s1 = 0; // Selection number from Main Menu
-		int s2 = 0; // Selection number from Insert Teams Menu
+		int s1 =0; // Selection number for Main Menu
+		int s11 =0; // Selection number for Insert Team Menu
+		int s2 =0; // Selection number for Schedule Menu
+		int s4 =0; // Selection number for Simulate Menu
+		int s5 =0; // Selection number for Reset Menu
 
 		do {
 			// main menu
@@ -16,9 +19,9 @@ public class WorldCup {
 			case 1:// insert teams
 				do {
 					Display.TeamMenu();
-					s2 = UserInput.getInteger();
+					s11 = UserInput.getInteger();
 
-					switch (s2) {
+					switch (s11) {
 					case 1:
 						Checks.isFull();
 						// Display.InsertTeams();
@@ -29,36 +32,81 @@ public class WorldCup {
 						// Display.ShowTeams();
 						break;
 					}
-				} while (s2 != 3);
+				} while (s11 != 3);
 				break;
 
 			case 2: // Schedule of the tournament
-				// Schedule.Groups();
-				// Schedule.RoundOf16();
-				// Schedule.QuarterFinals();
-				// Schedule.SemiFinals();
-				// Schedule.Final();
-				// Schedule.ShowSchedule();
+				do {
+					Display.Schedule();
+					s2 = UserInput.getInteger();
+
+					switch (s2) {
+					case 1:
+						Draw.DrawGroup();
+						Schedule.Groups();
+						break;
+					case 2:
+						Schedule.RoundOf16();
+						break;
+					case 3:
+						Schedule.QuarterFinals();
+						break;
+					case 4:
+						Schedule.SemiFinals();
+						break;
+					case 5:
+						Schedule.Final();
+						break;
+					}
+				} while (s2 != 6);
 				break;
 
 			case 3: // ranking
-				// Display.ShowRanking();
-				FIFAPoints.GroupStagePoints();
+				Display.ShowRanking();
 				break;
 
 			case 4: // Simulate Menu
-				// GroupStage.GroupPointsUpdate();
-				// GroupStage.OrderByPoints();
-				// Simulate.GroupStageScore();
-				// Simulate.setNewPoints();
-				// Simulate.Roundof16();
-				// Simulate.QuarterFinals();
-				// Simulate.SemiFinals();
-				// Simulate.Final();
-				// Draw.DrawGroup();
+				// Display.ShowGroups();
+				do {
+					Display.Simulate();
+					s4 = UserInput.getInteger();
+
+					switch (s4) {
+					case 1:
+						Simulate.GroupStageScore();
+						GroupStage.GroupPointsUpdate();
+						GroupStage.OrderByPoints();
+						break;
+					case 2:
+						Simulate.Roundof16();
+						break;
+					case 3:
+						Simulate.QuarterFinals();
+						break;
+					case 4:
+						Simulate.SemiFinals();
+						break;
+					case 5:
+						Simulate.Final();
+						break;
+					}
+				} while (s4 != 6);
+				break;
+				
+			case 5:
+				do {
+					Display.Reset();
+					s5 = UserInput.getInteger();
+
+					switch (s5) {
+					case 1:
+						Reset.Reset();
+						break;
+					}
+				} while (s5 != 2);
 				break;
 			}
-		} while (s1 != 5);
+		} while (s1 != 6);
 		System.out.println("Bye! See you soon!");
 	}
 }
