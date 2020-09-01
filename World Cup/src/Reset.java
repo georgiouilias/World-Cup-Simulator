@@ -5,9 +5,10 @@ import java.sql.ResultSet;
 
 public class Reset {
 	
-	public static void Reset() {
+	public static void ResetAll() {
 		GroupsReset();
-		//System.out.println("Group Table are empty");
+		ScheduleReset();
+		WolrdCupFinalReset();
 
 	}
 
@@ -16,7 +17,7 @@ public class Reset {
 
 		for (int i = 0; i < groups.length; i++) {
 
-			String q = "TRUNCATE ` group " + groups[i] + "` ";
+			String q = "TRUNCATE `worldcup`.`group " + groups[i] + "` ";
 
 			try {
 				Class.forName("com.mysql.jdbc.Driver");

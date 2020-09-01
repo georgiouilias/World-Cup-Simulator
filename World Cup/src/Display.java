@@ -125,7 +125,7 @@ public class Display {
 	}
 
 	public static void Reset() {
-		System.out.println("Do you want to reset the tournamet?\n"
+		System.out.println("Do you want to reset the tournament?\n"
 				+ "1. Yes.\n"
 				+ "2. No.\n");
 	}

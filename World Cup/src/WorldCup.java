@@ -4,11 +4,11 @@ public class WorldCup {
 
 	public static void main(String[] args) {
 
-		int s1 =0; // Selection number for Main Menu
-		int s11 =0; // Selection number for Insert Team Menu
-		int s2 =0; // Selection number for Schedule Menu
-		int s4 =0; // Selection number for Simulate Menu
-		int s5 =0; // Selection number for Reset Menu
+		int s1 = 0; // Selection number for Main Menu
+		int s11 = 0; // Selection number for Insert Team Menu
+		int s2 = 0; // Selection number for Schedule Menu
+		int s4 = 0; // Selection number for Simulate Menu
+		int s5 = 0; // Selection number for Reset Menu
 
 		do {
 			// main menu
@@ -36,7 +36,7 @@ public class WorldCup {
 				break;
 
 			case 2: // Schedule of the tournament
-				do {
+				do { // na balo elegxous
 					Display.Schedule();
 					s2 = UserInput.getInteger();
 
@@ -66,8 +66,7 @@ public class WorldCup {
 				break;
 
 			case 4: // Simulate Menu
-				// Display.ShowGroups();
-				do {
+				do { // na balo elegxous
 					Display.Simulate();
 					s4 = UserInput.getInteger();
 
@@ -92,19 +91,13 @@ public class WorldCup {
 					}
 				} while (s4 != 6);
 				break;
-				
-			case 5:
-				do {
-					Display.Reset();
-					s5 = UserInput.getInteger();
 
-					switch (s5) {
-					case 1:
-						Reset.Reset();
-						break;
-					}
-				} while (s5 != 2);
-				break;
+			case 5:
+				Display.Reset();
+				s5 = UserInput.getInteger();
+				if (s5 == 1) {
+					Reset.ResetAll();
+				}
 			}
 		} while (s1 != 6);
 		System.out.println("Bye! See you soon!");
